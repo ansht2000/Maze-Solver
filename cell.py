@@ -11,6 +11,7 @@ class Cell:
         self.__x2 = bottom_right.get_x()
         self.__y2 = bottom_right.get_y()
         self.__win = window
+        self.visited = False
     
     def draw(self):
         if self.__win is None:
@@ -29,8 +30,8 @@ class Cell:
             self.__win.draw_line(line=line, fill_color="black")
 
     def erase(self, walls: list):
-        # only here for the test cases where a window is not passed to the constructor
         if self.__win is None:
+            # this is only here for the test cases where a window is not passed to the maze constructor
             for wall in walls:
                 match wall:
                     case "left":
