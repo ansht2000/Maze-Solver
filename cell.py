@@ -12,6 +12,14 @@ class Cell:
         self.__y2 = bottom_right.get_y()
         self.__win = window
         self.visited = False
+
+    def __eq__(self, other: "Cell"):
+        return (
+            self.__x1 == other.__x1
+            and self.__y1 == other.__y1
+            and self.__x2 == other.__x2
+            and self.__y2 == other.__y2
+        )
     
     def draw(self):
         if self.__win is None:
