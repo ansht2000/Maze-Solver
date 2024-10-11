@@ -21,6 +21,18 @@ class Cell:
             and self.__y2 == other.__y2
         )
     
+    def get_x1(self):
+        return self.__x1
+    
+    def get_x2(self):
+        return self.__x2
+    
+    def get_y1(self):
+        return self.__y1
+    
+    def get_y2(self):
+        return self.__y2
+    
     def draw(self):
         if self.__win is None:
             return
